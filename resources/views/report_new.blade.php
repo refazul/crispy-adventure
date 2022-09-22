@@ -99,11 +99,17 @@
                             <a class="toggle-vis" data-column="20">ETA</a>
                             <a class="toggle-vis" data-column="21">Invoice Payment Date</a>
                             <a class="toggle-vis" data-column="22">Payment Acceptance Date</a>
-                            <a class="toggle-vis" data-column="23">S/G Weight QTY</a>
+                            <a class="toggle-vis" data-column="23">S/G Weight Claim Amount</a>
                             <a class="toggle-vis" data-column="24">S/G Weight Receiving Date</a>
                             <a class="toggle-vis" data-column="25">Quality Claim Amount</a>
                             <a class="toggle-vis" data-column="26">Quality Amount Receiving Date</a>
                             <a class="toggle-vis" data-column="27">Carrying Charge Amount</a>
+                            <a class="toggle-vis" data-column="28">Commercial Invoice Number</a>
+                            <a class="toggle-vis" data-column="29">Debit Note Number</a>
+                            <a class="toggle-vis" data-column="30">Debit Note Amount</a>
+                            <a class="toggle-vis" data-column="31">Debit Note Received Amount</a>
+                            <a class="toggle-vis" data-column="32">Debit Note Received Date</a>
+
                         </div>
                         <div class="table-responsive">
                             <table class="table table-striped table-bordered table-hover dataTables-example"
@@ -133,11 +139,16 @@
                                     <th>ETA</th>
                                     <th>Invoice Payment Date</th>
                                     <th>Payment Acceptance Date</th>
-                                    <th>S/G Weight QTY</th>
+                                    <th>S/G Weight Claim Amount</th>
                                     <th>S/G Weight Receiving Date</th>
                                     <th>Quality Claim Amount</th>
                                     <th>Quality Amount Receiving Date</th>
                                     <th>Carrying Charge Amount</th>
+                                    <th>Commercial Invoice Number</th>
+                                    <th>Debit Note Number</th>
+                                    <th>Debit Note Amount</th>
+                                    <th>Debit Note Received Amount</th>
+                                    <th>Debit Note Received Date</th>
                                 </tr>
                                 </thead>
                             </table>
@@ -202,11 +213,16 @@
                 {data: 'eta_date', name: 'eta_date'},
                 {data: 'payment_invoice_payment_date', name: 'payment_invoice_payment_date'},
                 {data: 'payment_acceptance_date', name: 'payment_acceptance_date'},
-                {data: 's_g_w_c_short_gain_weight_claim_qty', name: 's_g_w_c_short_gain_weight_claim_qty'},
+                {data: 'claim_amount', name: 'claim_amount'},
                 {data: 's_g_w_c_amount_received_date', name: 's_g_w_c_amount_received_date'},
                 {data: 'q_c_quality_claim_amount', name: 'q_c_quality_claim_amount'},
                 {data: 'q_c_amount_received_date', name: 'q_c_amount_received_date'},
-                {data: 'cc_amount', name: 'cc_amount'}
+                {data: 'cc_amount', name: 'cc_amount'},
+                {data: 'c_i_no', name: 'c_i_no'},
+                {data: 'd_n_no', name: 'd_n_no'},
+                {data: 'd_n_amount', name: 'd_n_amount'},
+                {data: 'd_n_r_amount', name: 'd_n_r_amount'},
+                {data: 'd_n_r_date', name: 'd_n_r_date'},
             ],
             "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
 //            pageLength: 25,
