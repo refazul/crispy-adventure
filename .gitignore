@@ -9,3 +9,4 @@ storage
 /public/.htaccess
 composer.lock
 package-lock.json
+cache
