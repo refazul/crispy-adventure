@@ -25,3 +25,65 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Original package.json
+
+```
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "jquery": "^3.1.0",
+    "laravel-elixir": "^6.0.0-9",
+    "laravel-elixir-vue-2": "^0.2.0",
+    "laravel-elixir-webpack-official": "^1.0.2",
+    "lodash": "^4.16.2",
+    "vue": "^2.0.1",
+    "vue-resource": "^1.0.3",
+    "fine-uploader": "^5.11.5"
+  }
+}
+```
+
+## Original composer.json
+
+```
+"require": {
+    "php": ">=5.6.4",
+    "laravel/framework": "5.3.*",
+    "barryvdh/laravel-ide-helper": "^2.2",
+    "doctrine/dbal": "^2.5",
+    "yajra/laravel-datatables-oracle": "~6.0",
+    "fineuploader/php-traditional-server": "^1.2",
+    "league/flysystem-aws-s3-v3": "~1.0",
+    "maatwebsite/excel": "~2.1.0"
+},
+"require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~5.0",
+    "symfony/css-selector": "3.1.*",
+    "symfony/dom-crawler": "3.1.*"
+},
+"scripts": {
+    "post-root-package-install": [
+        "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+        "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+        "Illuminate\\Foundation\\ComposerScripts::postInstall",
+        "php artisan optimize"
+    ],
+    "post-update-cmd": [
+        "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+        "php artisan optimize"
+    ]
+},
+```

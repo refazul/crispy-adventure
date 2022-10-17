@@ -7,3 +7,5 @@ Homestead.yaml
 node_modules
 storage
 /public/.htaccess
+composer.lock
+package-lock.json
