@@ -71,7 +71,7 @@ class Report extends Model
         $qtys = explode(',', $this->s_g_w_c_short_gain_weight_claim_qty);
         $price = preg_replace('/[^0-9.]/', '', $this->s_c_price);
         foreach($qtys as $qty) {
-            $amounts[] = $price * $qty;
+            $amounts[] = (float)$price * (float)$qty;
         }
         return implode(', ', $amounts);
     }

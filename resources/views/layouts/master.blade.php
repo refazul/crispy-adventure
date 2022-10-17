@@ -15,8 +15,8 @@
             vertical-align: middle;
         }
     </style>
-    <link href="{{asset(elixir('css/vendor.css'))}}" rel="stylesheet">
-    <link href="{{asset(elixir('css/inspinia.css'))}}" rel="stylesheet">
+    <link href="/css/vendor.css" rel="stylesheet">
+    <link href="/css/inspinia.css" rel="stylesheet">
     @stack('styles')
     <style>
         .navbar-right {
@@ -36,8 +36,8 @@
     </div>
 </div>
 
-<script src="{{asset(elixir('js/vendor.js'))}}"></script>
-<script src="{{asset(elixir('js/inspinia.js'))}}"></script>
+<script src="/js/vendor.js"></script>
+<script src="/js/inspinia.js"></script>
 <script>
     function getOptionsList(select2_id) {//just to initialize options global variable
 //        console.log('getOptionsList');

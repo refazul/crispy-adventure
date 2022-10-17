@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\ProjectFile;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 
 class FileUploadController extends Controller
 {
@@ -65,7 +64,7 @@ class FileUploadController extends Controller
                 // To return a name used for uploaded file you can use the following line.
                 $result["uploadName"] = $uploader->getUploadName();
             }
-            $this->store();
+            $this->store($request);
             echo json_encode($result);
         } // for delete file requests
         else if ($method == "DELETE") {
@@ -77,14 +76,13 @@ class FileUploadController extends Controller
         }
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $input = Input::get();
         ProjectFile::create([
-            'project_id' => $input['project_id'],
-            'element_id' => $input['element_id'],
-            'file_id' => $input['qquuid'],
-            'file_name' => $input['qqfilename']
+            'project_id' => $request->project_id,
+            'element_id' => $request->element_id,
+            'file_id' => $request->qquuid,
+            'file_name' => $request->qqfilename
         ]);
     }
 
