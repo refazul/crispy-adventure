@@ -87,3 +87,20 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
     ]
 },
 ```
+
+## Troubleshooting
+
+```
+php artisan cache:clear
+php artisan view:clear
+php artisan config:clear
+```
+
+Make sure following empty directories exist
+
+```
+storage/framework/sessions
+storage/framework/views
+storage/framework/cache
+bootstrap/cache
+```
